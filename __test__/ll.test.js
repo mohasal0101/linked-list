@@ -62,3 +62,4 @@ describe('Testing linked list class', () => {
             expect(list.head.next.next).toBeNull();
         })
     })
+    

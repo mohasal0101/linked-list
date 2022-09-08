@@ -45,6 +45,16 @@ class LinkedList {
             current = current.next;
         }
     }
+    includes(value) {
+        let current = this.head;
+        while(current) {
+            if(current.value === value) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
 }
 
 module.exports = LinkedList;
