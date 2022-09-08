@@ -28,3 +28,24 @@ describe('Testing linked list class', () => {
             expect(list.head.next.next).toBeNull();
         })
     })
+
+
+    describe('append to the end of the Linked list', () => {
+        it('Add to an empty Linked list', () => {
+            let list = new LinkedList();
+            list.append(1);
+            expect(list.head.value).toEqual(1);
+            expect(list.head.next).toBeNull();
+        });
+
+        it('Add to a non-empty list', () => {
+            let list = new LinkedList();
+            list.append(1);
+            list.append(2);
+            list.append(3);
+            expect(list.head.value).toEqual(1);
+            expect(list.head.next.value).toEqual(2);
+            expect(list.head.next.next.value).toEqual(3);
+            expect(list.head.next.next.next).toBeNull();
+        })
+    })
