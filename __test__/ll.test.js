@@ -49,3 +49,16 @@ describe('Testing linked list class', () => {
             expect(list.head.next.next.next).toBeNull();
         })
     })
+
+    describe('Delete the middle element in the linked list', () => {
+        it('Delete the middle element', () => {
+            let list = new LinkedList();
+            list.append(1);
+            list.append(2);
+            list.append(3);
+            list.delete(2);
+            expect(list.head.value).toEqual(1);
+            expect(list.head.next.value).toEqual(3);
+            expect(list.head.next.next).toBeNull();
+        })
+    })
