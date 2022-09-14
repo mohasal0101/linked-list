@@ -55,6 +55,20 @@ class LinkedList {
         }
         return false;
     }
+    insertInto(value, newVal) {
+        let current = this.head;
+        while(current) {
+            if(current.value === value) {
+                let node = new Node(newVal);
+                node.next = current.next;
+                current.next = node;
+                return;
+            }
+            current = current.next;
+        }
+    }
+
 }
+
 
 module.exports = LinkedList;

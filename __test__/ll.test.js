@@ -62,4 +62,21 @@ describe('Testing linked list class', () => {
             expect(list.head.next.next).toBeNull();
         })
     })
-    
+
+    describe('Insert into specific index in the linked list', () => {
+        it('Insert into specific index', () => {
+            let list = new LinkedList();
+            list.append(1);
+            list.append(2);
+            list.append(3);
+            list.insertInto(2, 4);
+            expect(list.head.value).toEqual(1);
+            expect(list.head.next.value).toEqual(2);
+            expect(list.head.next.next.value).toEqual(4);
+            expect(list.head.next.next.next.value).toEqual(3);
+            expect(list.head.next.next.next.next).toBeNull();
+
+           
+        })
+    })
+
